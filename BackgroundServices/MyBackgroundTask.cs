@@ -72,7 +72,6 @@ namespace BackgroundServices
 
             notifier.Show(new ToastNotification(content));
         }
-        //comment
 
         private async static Task UpdateTilesAsync()
         {
