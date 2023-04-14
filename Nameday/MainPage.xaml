@@ -70,6 +70,9 @@
                 <ItemsControl ItemsSource="{Binding Contacts}" ItemTemplate="{StaticResource NamedayContactTemplate}"/>
             </ScrollViewer>
         </Grid>
+        <Button Content="Register" Command="{Binding RegisterButtonCommand}">
+            
+        </Button>
 
     </Grid>
 </Page>

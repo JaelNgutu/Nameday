@@ -10,6 +10,8 @@ using Windows.ApplicationModel.Appointments;
 using Windows.ApplicationModel.Contacts;
 using Windows.ApplicationModel.Email;
 using Common;
+using System.Diagnostics;
+using GalaSoft.MvvmLight.Command;
 
 namespace Nameday
 {
@@ -198,6 +200,19 @@ namespace Nameday
             public void Execute(object parameter) => _mainPageData.AddReminderToCalendar();
 
             public void FireCanExecuteChanged() => CanExecuteChanged?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void RegisterButton()
+        {
+
+            Debug.WriteLine("Register Button Hit");
+        }
+
+
+        public RelayCommand RegisterButtonCommand
+        {
+            get { return new RelayCommand(() => RegisterButton()); }
+
         }
 
     }
